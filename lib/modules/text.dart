@@ -73,7 +73,7 @@ class _TextEditorImageState extends State<TextEditorImage> {
                 );
               },
               color: Colors.white,
-              padding: const EdgeInsets.all(15),
+              padding: const EdgeInsets.only(right: 60),
             )
           ],
         ),

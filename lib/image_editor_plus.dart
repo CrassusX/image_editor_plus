@@ -552,7 +552,7 @@ class _SingleImageEditorState extends State<SingleImageEditor> {
                 ),
               ),
             IconButton(
-              padding: const EdgeInsets.symmetric(horizontal: 8),
+              padding: const EdgeInsets.only(right: 16, left: 8),
               icon: const Icon(Icons.check),
               onPressed: () async {
                 resetTransformation();

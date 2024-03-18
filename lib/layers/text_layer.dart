@@ -42,15 +42,21 @@ class _TextViewState extends State<TextLayer> {
                     ),
                   ),
                   context: context,
-                  backgroundColor: Colors.transparent,
+                  backgroundColor: Colors.white,
+                  isScrollControlled: true,
                   builder: (context) {
-                    return TextLayerOverlay(
-                      index: layers.indexOf(widget.layerData),
-                      layer: widget.layerData,
-                      onUpdate: () {
-                        if (widget.onUpdate != null) widget.onUpdate!();
-                        setState(() {});
-                      },
+                    return FractionallySizedBox(
+                      heightFactor: 0.8,
+                      child: SingleChildScrollView(
+                        child: TextLayerOverlay(
+                          index: layers.indexOf(widget.layerData),
+                          layer: widget.layerData,
+                          onUpdate: () {
+                            if (widget.onUpdate != null) widget.onUpdate!();
+                            setState(() {});
+                          },
+                        ),
+                      ),
                     );
                   },
                 );
