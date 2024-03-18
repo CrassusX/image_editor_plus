@@ -944,28 +944,28 @@ class _SingleImageEditorState extends State<SingleImageEditor> {
                         setState(() {});
                       },
                     ),
-                  if (widget.textOption != null)
-                    BottomButton(
-                      icon: Icons.link,
-                      text: i18n('Link'),
-                      onTap: () async {
-                        LinkLayerData? layer = await Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const LinkEditorImage(),
-                          ),
-                        );
+                  // if (widget.textOption != null)
+                  //   BottomButton(
+                  //     icon: Icons.link,
+                  //     text: i18n('Link'),
+                  //     onTap: () async {
+                  //       LinkLayerData? layer = await Navigator.push(
+                  //         context,
+                  //         MaterialPageRoute(
+                  //           builder: (context) => const LinkEditorImage(),
+                  //         ),
+                  //       );
 
-                        if (layer == null) return;
+                  //       if (layer == null) return;
 
-                        undoLayers.clear();
-                        removedLayers.clear();
+                  //       undoLayers.clear();
+                  //       removedLayers.clear();
 
-                        layers.add(layer);
+                  //       layers.add(layer);
 
-                        setState(() {});
-                      },
-                    ),
+                  //       setState(() {});
+                  //     },
+                  //   ),
                   if (widget.flipOption != null)
                     BottomButton(
                       icon: Icons.flip,
